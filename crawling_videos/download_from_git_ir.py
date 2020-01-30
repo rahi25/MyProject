@@ -1,3 +1,4 @@
+#!/home/rahi/anaconda3/envs/myenv/bin/python3.7
 """
     Program: Downloading video from git.ir
     Author: Ehsan Rahnama
@@ -40,7 +41,7 @@ def download_video_link(url):
         link_ = link.get('href')
         if re.findall(r"(https://)\w.*mp4", link_):
             video_links.append(link_)
-
+    
     return video_links
 
 
@@ -99,6 +100,7 @@ if __name__ == "__main__":
             print(f"{bcolors.WARNING}Lost Downloded --> {lost_download}{bcolors.ENDC}\n")
 
             print(f"{bcolors.OkCAYAN}Downloading time --> {(ee - ss) // 60} Minute{bcolors.ENDC}")
+            break
 
         elif enter == "n" or enter == "no":
             print(bcolors.OkCAYAN + bcolors.BOLD + "GOOD BYE !!!!" + bcolors.ENDC)
